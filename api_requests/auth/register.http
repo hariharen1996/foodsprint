@@ -1,0 +1,12 @@
+### register
+
+POST http://127.0.0.1:8000/api/auth/register/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "username":"test",
+  "email": "test@gmail.com",
+  "password": "Test@123",
+  "phone":"123456789",
+  "address":"chennai"
+}
