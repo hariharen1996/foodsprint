@@ -1,0 +1,4 @@
+### logout
+
+POST http://127.0.0.1:8000/api/auth/logout/ HTTP/1.1
+Authorization: Token <place the login token here>
