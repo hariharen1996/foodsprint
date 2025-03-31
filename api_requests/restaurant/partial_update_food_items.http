@@ -1,0 +1,15 @@
+### partial update food items
+
+PATCH  http://127.0.0.1:8000/api/restaurant/food-items/3/
+Authorization: Token {{ API_TOKEN }}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary1234
+
+
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="description"
+
+Delicious cheese and vegetable pizza
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="category"
+
+3

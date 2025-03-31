@@ -1,0 +1,36 @@
+### add food items
+
+POST http://127.0.0.1:8000/api/restaurant/food-items/
+Authorization: Token {{ API_TOKEN }}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary1234
+
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="name"
+
+Cheese Pizza
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="description"
+
+Delicious cheese pizza
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="price"
+
+600
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="category"
+
+3
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="food_type"
+
+V
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="is_available"
+
+true
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="image"; filename="pizza.jpg"
+Content-Type: image/jpeg
+
+< enter image file path here
+------WebKitFormBoundary1234--

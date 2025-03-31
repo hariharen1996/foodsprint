@@ -1,0 +1,5 @@
+### retrieve food items
+
+GET http://127.0.0.1:8000/api/restaurant/food-items/
+Authorization: Token {{ API_TOKEN }}
+Content-Type: application/json

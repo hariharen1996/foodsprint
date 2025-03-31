@@ -1,0 +1,4 @@
+### delete food items
+
+DELETE http://127.0.0.1:8000/api/restaurant/food-items/5/
+Authorization: Token {{ API_TOKEN }}

@@ -8,7 +8,16 @@ class CatgeorySerailizer(serializers.ModelSerializer):
         read_only_fields = ('created_at','updated_at')
         
 class FoodItemSerializer(serializers.ModelSerializer):
-    category = CatgeorySerailizer(read_only=True)
+    category = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all())
+
+    def validate(self, attrs):
+        if 'category' not in attrs:
+            raise serializers.ValidationError('Category is required')
+
+        if not Category.objects.filter(id=attrs['category'].id).exists():
+            raise serializers.ValidationError('Category does not exists')
+
+        return attrs
 
     class Meta:
         model = FoodItems

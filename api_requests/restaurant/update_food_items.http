@@ -1,0 +1,36 @@
+### update food items
+
+PUT http://127.0.0.1:8000/api/restaurant/food-items/2/
+Authorization: Token {{ API_TOKEN }}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary1234
+
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="name"
+
+Venilla icecreams
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="description"
+
+Delicious venilla icecreams
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="price"
+
+600
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="category"
+
+6
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="food_type"
+
+V
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="is_available"
+
+true
+------WebKitFormBoundary1234
+Content-Disposition: form-data; name="image"; filename="icecream.jpg"
+Content-Type: image/jpeg
+
+< enter image file path here
+------WebKitFormBoundary1234--
