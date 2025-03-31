@@ -23,7 +23,7 @@ Content-Disposition: form-data; name="category"
 ------WebKitFormBoundary1234
 Content-Disposition: form-data; name="food_type"
 
-V
+NV
 ------WebKitFormBoundary1234
 Content-Disposition: form-data; name="is_available"
 

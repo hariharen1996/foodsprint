@@ -5,12 +5,16 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from .models import Cart,CartItem,Category,FoodItems
 from .serializer import CartSerailizer,CatgeorySerailizer,AddToCartSerializer,FoodItemSerializer,UpdateCartItemSerializer
+from django_filters.rest_framework import DjangoFilterBackend
+from .filters import FoodItemFilter
+from .pagination import FilterPagination
 
 # Create your views here.
 class CategoryListCreateAPIView(ListCreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CatgeorySerailizer
     permission_classes = [IsAuthenticated]
+    pagination_class = FilterPagination
 
 class CategoryRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.all()
@@ -21,6 +25,9 @@ class FoodItemListCreateAPIView(ListCreateAPIView):
     queryset = FoodItems.objects.select_related('category').all()
     serializer_class = FoodItemSerializer
     permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend]
+    filterset_class = FoodItemFilter
+    pagination_class = FilterPagination
 
 class FoodItemsRetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
     queryset = FoodItems.objects.select_related('category').all()

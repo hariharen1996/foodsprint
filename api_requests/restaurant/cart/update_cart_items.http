@@ -1,4 +1,4 @@
-### update cart
+### update cart items
 
 PUT http://127.0.0.1:8000/api/restaurant/cart/items/3/
 Authorization: Token {{ API_TOKEN }}

@@ -1,0 +1,30 @@
+### filter by foodtype - V
+
+GET http://127.0.0.1:8000/api/restaurant/food-items/?food_type=V
+Authorization: Token {{ API_TOKEN }}
+Content-Type: application/json
+
+### filter by foodtype - NV
+
+GET http://127.0.0.1:8000/api/restaurant/food-items/?food_type=NV
+Authorization: Token {{ API_TOKEN }}
+Content-Type: application/json
+
+
+### filter by name
+
+GET http://127.0.0.1:8000/api/restaurant/food-items/?name=Venilla
+Authorization: Token {{ API_TOKEN }}
+Content-Type: application/json
+
+### filter by price
+
+GET http://127.0.0.1:8000/api/restaurant/food-items/?price=200
+Authorization: Token {{ API_TOKEN }}
+Content-Type: application/json
+
+### filter by category
+
+GET http://127.0.0.1:8000/api/restaurant/food-items/?category=pizza
+Authorization: Token {{ API_TOKEN }}
+Content-Type: application/json

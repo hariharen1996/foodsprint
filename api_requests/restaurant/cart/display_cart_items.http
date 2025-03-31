@@ -1,4 +1,4 @@
-### display cart
+### display cart items
 
 GET http://127.0.0.1:8000/api/restaurant/cart/
 Authorization: Token {{ API_TOKEN }}

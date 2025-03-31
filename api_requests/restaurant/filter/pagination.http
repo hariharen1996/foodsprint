@@ -1,0 +1,5 @@
+### filter by pagination
+
+GET http://127.0.0.1:8000/api/restaurant/food-items/?page=1&page_size=5
+Authorization: Token {{ API_TOKEN }}
+Content-Type: application/json
