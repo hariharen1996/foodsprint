@@ -48,7 +48,7 @@ class CartSerailizer(serializers.ModelSerializer):
     def get_total_price(self,data):
         return data.total_price 
 
-class AddToCartSerializer(serializers.ModelSerializer):
+class AddToCartSerializer(serializers.Serializer):
     food_item_id = serializers.IntegerField()
     quantity = serializers.IntegerField(default=1)
 
@@ -67,7 +67,7 @@ class AddToCartSerializer(serializers.ModelSerializer):
         cart_item,created = CartItem.objects.get_or_create(cart=cart,food_item_id=food_item_id,defaults={'quantity':quantity})
 
         if not created:
-            cart_item.quantity = quantity
+            cart_item.quantity += quantity
             cart_item.save()
 
         return cart

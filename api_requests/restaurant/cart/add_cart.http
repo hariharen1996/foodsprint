@@ -1,0 +1,11 @@
+### add food items
+
+POST http://127.0.0.1:8000/api/restaurant/cart/add/
+Authorization: Token {{ API_TOKEN }}
+Content-Type: application/json
+
+{
+    "food_item_id":3,
+    "quantity":1
+}
+

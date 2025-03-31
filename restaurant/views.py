@@ -40,14 +40,14 @@ class AddToCartView(GenericAPIView):
     permission_classes = [IsAuthenticated]
 
     def post(self,request,*args,**kwargs):
-        serializer = serializer.get_serializer(data=request.data)
+        serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
         cart,created = Cart.objects.get_or_create(user=request.user)
-        food_items_id = serializer.validated_data['food_item_id']
+        food_item_id = serializer.validated_data['food_item_id']
         quantity = serializer.validated_data['quantity']
 
-        cart_item,created = CartItem.objects.get_or_create(cart=cart,food_items_id=food_items_id,defaults={'quantity':quantity})
+        cart_item,created = CartItem.objects.get_or_create(cart=cart,food_item_id=food_item_id,defaults={'quantity':quantity})
 
         if not created:
             cart_item.quantity += quantity
