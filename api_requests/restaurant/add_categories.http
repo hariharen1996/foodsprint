@@ -1,0 +1,66 @@
+### categories1
+
+POST http://127.0.0.1:8000/api/restaurant/categories/ HTTP/1.1
+Content-Type: application/json
+Authorization: Token {{ API_TOKEN }}
+
+{
+    "name": "Burgers",
+    "description": "This is burger sections"
+}
+
+###categories2
+
+POST http://127.0.0.1:8000/api/restaurant/categories/ HTTP/1.1
+Content-Type: application/json
+Authorization: Token {{ API_TOKEN }}
+
+{
+    "name": "Briyani",
+    "description": "This is briyani sections"
+}
+
+###categories3
+
+POST http://127.0.0.1:8000/api/restaurant/categories/ HTTP/1.1
+Content-Type: application/json
+Authorization: Token {{ API_TOKEN }}
+
+{
+    "name": "Pizza",
+    "description": "This is pizza varieties"
+}
+
+###categories4
+
+POST http://127.0.0.1:8000/api/restaurant/categories/ HTTP/1.1
+Content-Type: application/json
+Authorization: Token {{ API_TOKEN }}
+
+{
+    "name": "chapathi",
+    "description": "This is chapathi varieties"
+}
+
+###categories5
+
+POST http://127.0.0.1:8000/api/restaurant/categories/ HTTP/1.1
+Content-Type: application/json
+Authorization: Token {{ API_TOKEN }}
+
+{
+    "name": "snacks",
+    "description": "This is snacks varieties"
+}
+
+###categories6
+
+POST http://127.0.0.1:8000/api/restaurant/categories/ HTTP/1.1
+Content-Type: application/json
+Authorization: Token {{ API_TOKEN }}
+
+{
+    "name": "icecreams",
+    "description": "This is icecream varieties"
+}
+
